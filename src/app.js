@@ -50,6 +50,7 @@ app.get('/weather', (req, res) => {
         if(error) {
             res.send({error})
         } else {
+            console.log(data);
             weather(data, (error, response) => {
                if(error) {
                    res.send({error})
@@ -83,6 +84,6 @@ app.get('*', (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log('Server is up on port' + port)
+    console.log('Server is up on port ' + port)
 })
 
