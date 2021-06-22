@@ -12,7 +12,7 @@ form.addEventListener('submit', (event) => {
     messageTwo.innerHTML = ''
     loader.classList.remove('hidden')
     const address = input.value
-    const url = 'http://localhost:3000/weather?address=' + address
+    const url = '/weather?address=' + address
     fetch(url).then((response) => {
     response.json().then((data) => {
         loader.classList.add('hidden')
